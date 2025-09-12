@@ -1,0 +1,205 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <h3>Ou CPA LLC</h3>
+          <p>Professional accounting and tax services you can trust. Your financial success is our priority.</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Business Tax Reporting</a></li>
+          <li><a href="#services">Personal Tax Reporting</a></li>
+          <li><a href="#services">Bookkeeping & Payroll</a></li>
+          <li><a href="#services">Incorporation & LLC Creation</a></li>
+          <li><a href="#services">Tax Planning</a></li>
+          <li><a href="#services">IRS Solutions</a></li>
+          <li><a href="#services">Notary Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="footer-contact">
+          <p>
+            <strong>Phone:</strong><br>
+            (702) 756-4507
+          </p>
+          <p>
+            <strong>Email:</strong><br>
+            ou.cpanotary@gmail.com
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 Ou CPA LLC. All rights reserved.</p>
+        <div class="footer-badges">
+          <span class="badge">CPA Certified</span>
+          <span class="badge">Licensed</span>
+          <span class="badge">Insured</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 3rem 0 1rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-logo p {
+    margin-bottom: 1.5rem;
+    color: var(--color-gray-light);
+    line-height: 1.6;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links a {
+    color: var(--color-gray-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-sage-light);
+  }
+
+  .footer-contact p {
+    margin-bottom: 1rem;
+    color: var(--color-gray-light);
+    line-height: 1.5;
+  }
+
+  .footer-contact strong {
+    color: var(--color-white);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+  }
+
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p {
+    color: var(--color-gray-light);
+    margin: 0;
+  }
+
+  .footer-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background-color: var(--color-sage);
+    color: var(--color-white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .footer-badges {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer {
+      padding: 1.5rem 0 1rem;
+    }
+
+    .footer-content {
+      gap: 1.5rem;
+    }
+
+    .footer-section h3,
+    .footer-section h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-badges {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .badge {
+      text-align: center;
+    }
+  }
+</style>

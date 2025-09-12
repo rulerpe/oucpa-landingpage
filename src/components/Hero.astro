@@ -1,0 +1,176 @@
+---
+import { Image } from 'astro:assets';
+import vegasImage from '../assets/home-background.jpg';
+---
+
+<section id="home" class="hero">
+  <div class="hero-background">
+    <Image 
+      src={vegasImage} 
+      alt="Las Vegas night skyline background" 
+      class="hero-bg-image"
+      loading="eager"
+      quality={80}
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Professional, Precise, Principled</h1>
+        <p class="hero-subtitle">
+          Ou CPA LLC is a Nevada licensed CPA firm serving small businesses and professionals across the states. We pair professional judgment with precision and proactive planning to minimize taxes and keep you compliant year round. We prepare business and individual returns, provide bookkeeping and payroll, deliver clear tax projections, and handle IRS and state notices with practical, timely solutions. Expect organized workflows, plainEnglish explanations.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="#services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    color: var(--color-white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+  }
+
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hero-specific button styling for better visibility */
+  .hero .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-dark);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
+  .hero .btn-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    border-color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    .hero-bg-image {
+      object-position: center 20%;
+    }
+
+    .hero-content {
+      padding: 0 1rem;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      min-height: 100vh;
+    }
+
+    .hero-bg-image {
+      object-position: center 30%;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+    }
+  }
+</style>

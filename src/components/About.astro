@@ -1,0 +1,311 @@
+---
+import { Image } from 'astro:assets';
+import vapeImage from '../assets/vape-image.png';
+---
+
+<section id="about" class="about section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Ou CPA LLC</h2>
+        <p class="lead">
+          With over 7 years of specialized experience in the tobacco industry, we are a trusted partner for businesses navigating the complex landscape of tobacco tax and regulatory compliance. We provide end-to-end services including:
+        </p>
+        <ul class="services-list">
+          <li>Other Tobacco Product (OTP) Tax Filing for all U.S states</li>
+          <li>PACT Act Reporting for all U.S. states</li>
+          <li>Sales & Use Tax Filing across all jurisdictions</li>
+          <li>Tobacco Audit Support & Representation</li>
+          <li>State Tobacco Tax Compliance Management</li>
+          <li>Full-Service Bookkeeping</li>
+        </ul>
+        <p>
+          Our deep industry knowledge, accuracy, and commitment to compliance have earned us a 100% client retention rate. Whether you're a manufacturer, distributor, or retailer, we simplify regulatory burdens so you can focus on growing your business.
+        </p>
+        <p class="tagline">
+          <strong>Let us handle the paperwork—so you can focus on your product.</strong>
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Client Retention</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <Image 
+          src={vapeImage} 
+          alt="Tobacco and vaping products" 
+          class="about-main-image"
+          loading="lazy"
+          quality={80}
+        />
+      </div>
+    </div>
+    <div class="reviews-section">
+      <h3>What Our Clients Say</h3>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "Ou CPA LLC has been an absolute game changer for our business. Their knowledge of tobacco tax laws across all states is unmatched. We no longer stress over compliance deadlines or audits—everything is handled with professionalism and accuracy."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">Wholesale Vape Distributor</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "I've worked with several firms over the years, but none compare to the service and expertise at Xtra OTP. Their team helped us navigate a multi-state PACT Act issue and made it look easy. Highly recommend for anyone in the tobacco industry."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">E-liquid Manufacturer</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "We were audited last year, and thanks to Xtra OTP, we passed with zero issues. Their attention to detail and proactive support throughout the process was outstanding. They truly live up to their 100% audit pass rate."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">Online Vape Retailer</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "From day one, the communication, clarity, and professionalism from Ou CPA LLC has been top-notch. They handle everything—sales tax, bookkeeping, PACT reports—and I know I'm in good hands."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">Online Vape Retailer</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "Their team understands the complexities of the tobacco business like no one else. We've worked with them for 4 years now and would never consider switching. Their accuracy and reliability are unmatched."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">Smoke Shop Owner</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="stars">
+            <span>★★★★★</span>
+          </div>
+          <blockquote>
+            "Before working with Xtra OTP, we were overwhelmed trying to manage multi-state filings. They streamlined everything for us and always keep us compliant and up to date. Their service is worth every penny."
+          </blockquote>
+          <div class="reviewer">
+            <p class="company">Wholesale Vape Distributor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--color-cream);
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .about-text h2 {
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  .services-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .services-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-dark);
+    line-height: 1.4;
+  }
+
+  .services-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-sage);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: var(--color-sage);
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(143, 170, 155, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-sage);
+  }
+
+  .about-stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-sage);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat p {
+    font-weight: 500;
+    color: var(--color-dark);
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .reviews-section {
+    border-top: 2px solid var(--color-sage-light);
+    padding-top: 4rem;
+  }
+
+  .reviews-section h3 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .review-card {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .stars {
+    margin-bottom: 1rem;
+  }
+
+  .stars span {
+    color: #FFD700;
+    font-size: 1.2rem;
+  }
+
+  blockquote {
+    font-style: italic;
+    color: var(--color-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--color-sage-light);
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    line-height: 1;
+  }
+
+  .reviewer h4 {
+    color: var(--color-dark);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+  }
+
+  .company {
+    color: var(--color-sage);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-image {
+      order: -1;
+    }
+
+
+    .stat h3 {
+      font-size: 2rem;
+    }
+
+    .reviews-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .about-main-image {
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+  }
+</style>

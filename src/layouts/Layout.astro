@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Professional CPA services for businesses and individuals. Business tax reporting, personal tax filing, bookkeeping, payroll, incorporation, and tax planning in Nevada." />
+		<title>Ou CPA LLC - Professional Accounting & Tax Services</title>
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://oucpa.com/" />
+		<meta property="og:title" content="Ou CPA LLC - Professional Accounting & Tax Services" />
+		<meta property="og:description" content="Professional CPA services for businesses and individuals. Business tax reporting, personal tax filing, bookkeeping, payroll, incorporation, and tax planning in Nevada." />
+		<meta property="og:image" content="https://oucpa.com/logo-square.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Ou CPA LLC - Professional Accounting & Tax Services" />
+		<meta property="og:site_name" content="Ou CPA LLC" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://oucpa.com/" />
+		<meta name="twitter:title" content="Ou CPA LLC - Professional Accounting & Tax Services" />
+		<meta name="twitter:description" content="Professional CPA services for businesses and individuals. Business tax reporting, personal tax filing, bookkeeping, payroll, incorporation, and tax planning in Nevada." />
+		<meta name="twitter:image" content="https://oucpa.com/logo-square.jpg" />
+		<meta name="twitter:image:alt" content="Ou CPA LLC - Professional Accounting & Tax Services" />
+		
+		<!-- LinkedIn -->
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="author" content="Ou CPA LLC" />
+		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content="CPA, accounting, tax services, business tax, personal tax, bookkeeping, payroll, Nevada CPA, tax planning, incorporation, LLC creation, IRS solutions" />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--color-sage: #6B8CAE;
+		--color-sage-light: #8FA4BE;
+		--color-sage-dark: #5A7A9A;
+		--color-cream: #F8F9FA;
+		--color-cream-dark: #E9ECEF;
+		--color-white: #FFFFFF;
+		--color-dark: #2D3748;
+		--color-gray: #718096;
+		--color-gray-light: #E2E8F0;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		line-height: 1.6;
+		color: var(--color-dark);
+		background-color: var(--color-white);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	.section {
+		padding: 80px 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		color: var(--color-gray);
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 12px 24px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		border: none;
+		cursor: pointer;
+		font-size: 1rem;
+	}
+
+	.btn-primary {
+		background-color: var(--color-sage);
+		color: var(--color-white);
+	}
+
+	.btn-primary:hover {
+		background-color: var(--color-sage-dark);
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background-color: transparent;
+		color: var(--color-sage);
+		border: 2px solid var(--color-sage);
+	}
+
+	.btn-secondary:hover {
+		background-color: var(--color-sage);
+		color: var(--color-white);
+	}
+
+	@media (max-width: 768px) {
+		.section {
+			padding: 60px 0;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+
+		.container {
+			padding: 0 16px;
+		}
+	}
+</style>
