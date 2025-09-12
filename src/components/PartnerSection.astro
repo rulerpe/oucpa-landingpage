@@ -56,23 +56,54 @@ import otptaxLogo from '../assets/otptax-logo.png';
   .logo-link {
     display: inline-block;
     transition: all 0.3s ease;
-    border-radius: 8px;
-    padding: 1rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray-light);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-sage-light), var(--color-sage));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
   }
 
   .logo-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px) scale(1.00);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-sage);
+  }
+
+  .logo-link:hover::before {
+    opacity: 0.05;
+  }
+
+  .logo-link:focus {
+    outline: none;
+    border-color: var(--color-sage);
+    box-shadow: 0 0 0 3px rgba(107, 140, 174, 0.2);
   }
 
   .partner-logo-image {
     max-width: 300px;
     height: auto;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
   }
 
   .logo-link:hover .partner-logo-image {
-    opacity: 0.9;
+    transform: scale(1.02);
   }
 
   @media (max-width: 768px) {
@@ -90,7 +121,7 @@ import otptaxLogo from '../assets/otptax-logo.png';
     }
 
     .logo-link {
-      padding: 0.75rem;
+      padding: 1.25rem;
     }
   }
 
@@ -109,7 +140,7 @@ import otptaxLogo from '../assets/otptax-logo.png';
     }
 
     .logo-link {
-      padding: 0.5rem;
+      padding: 1rem;
     }
   }
 </style>
