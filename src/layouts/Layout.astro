@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Professional CPA services for businesses and individuals. Business tax reporting, personal tax filing, bookkeeping, payroll, incorporation, and tax planning in Nevada." />
 		<title>Ou CPA LLC - Professional Accounting & Tax Services</title>
@@ -39,6 +39,13 @@
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
+		<!-- Color Palette Toggle Button -->
+		<button id="palette-toggle" class="palette-toggle" title="Switch Color Palette">
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+				<path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 1 0-20z" fill="currentColor"/>
+			</svg>
+		</button>
 		<slot />
 	</body>
 </html>
@@ -56,10 +63,24 @@
 		--color-gray-light: #E2E8F0;
 	}
 
+	/* Alternative Palette - Dark Navy Theme */
+	.palette-2 {
+		--color-sage: #2C3E50;
+		--color-sage-light: #34495E;
+		--color-sage-dark: #1A252F;
+		--color-cream: #F8F6F3;
+		--color-cream-dark: #F0EDE8;
+		--color-white: #FFFFFF;
+		--color-dark: #2D3748;
+		--color-gray: #718096;
+		--color-gray-light: #E2E8F0;
+	}
+
 	* {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
+		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 	}
 
 	html {
@@ -157,4 +178,75 @@
 			padding: 0 16px;
 		}
 	}
+
+	/* Palette Toggle Button */
+	.palette-toggle {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 1000;
+		width: 50px;
+		height: 50px;
+		border: none;
+		border-radius: 50%;
+		background-color: var(--color-sage);
+		color: var(--color-white);
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.palette-toggle:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+		background-color: var(--color-sage-dark);
+	}
+
+	.palette-toggle:active {
+		transform: translateY(0);
+	}
+
+	@media (max-width: 768px) {
+		.palette-toggle {
+			bottom: 15px;
+			right: 15px;
+			width: 45px;
+			height: 45px;
+			z-index: 99999;
+		}
+	}
 </style>
+
+<script is:inline>
+	// Color Palette Toggle Functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const toggleButton = document.getElementById('palette-toggle');
+		const body = document.body;
+		
+		// Check for saved palette preference or default to palette 1
+		const savedPalette = localStorage.getItem('colorPalette') || 'palette-1';
+		
+		// Apply saved palette
+		if (savedPalette === 'palette-2') {
+			body.classList.add('palette-2');
+		}
+		
+		// Toggle functionality
+		toggleButton.addEventListener('click', function() {
+			const isCurrentlyPalette2 = body.classList.contains('palette-2');
+			
+			if (isCurrentlyPalette2) {
+				// Switch to palette 1
+				body.classList.remove('palette-2');
+				localStorage.setItem('colorPalette', 'palette-1');
+			} else {
+				// Switch to palette 2
+				body.classList.add('palette-2');
+				localStorage.setItem('colorPalette', 'palette-2');
+			}
+		});
+	});
+</script>
