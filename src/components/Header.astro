@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import otptaxLogo from '../assets/otptax-logo.png';
 ---
 
 <header class="header">
@@ -31,6 +33,22 @@
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#services" class="nav-link">Areas of Practice</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="https://www.xtraotptax.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="partner-nav-btn"
+            >
+              <Image
+                src={otptaxLogo}
+                alt="Xtra OTP Tax LLC - Partner Company"
+                class="partner-nav-logo"
+                loading="eager"
+                quality={80}
+              />
+            </a>
+          </li>
         </ul>
       </nav>
       <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -115,6 +133,7 @@
 
   .nav-list {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 2rem;
     margin: 0;
@@ -146,6 +165,65 @@
 
   .nav-link:hover::after {
     width: 100%;
+  }
+
+  .partner-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    padding: 0.4rem;
+    background-color: var(--color-gray-light);
+    border: 2px solid var(--color-gray-light);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .partner-nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-sage-light), var(--color-sage));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .partner-nav-btn:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-sage);
+  }
+
+  .partner-nav-btn:hover::before {
+    opacity: 0.05;
+  }
+
+  .partner-nav-btn:focus {
+    outline: none;
+    border-color: var(--color-sage);
+    box-shadow: 0 0 0 3px rgba(107, 140, 174, 0.2);
+  }
+
+  .partner-nav-logo {
+    max-width: 80px;
+    height: auto;
+    max-height: 28px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    display: block;
+    object-fit: contain;
+  }
+
+  .partner-nav-btn:hover .partner-nav-logo {
+    transform: scale(1.05);
   }
 
   .mobile-menu-btn {
@@ -183,6 +261,14 @@
     .contact-item svg {
       width: 12px;
       height: 12px;
+    }
+
+    .partner-nav-logo {
+      max-width: 50px;
+    }
+
+    .partner-nav-btn {
+      padding: 0.4rem;
     }
   }
 
@@ -222,6 +308,28 @@
       border-bottom: none;
     }
 
+    .partner-nav-btn {
+      display: block;
+      padding: 1rem 20px;
+      border-bottom: 1px solid var(--color-gray-light);
+      border-radius: 6px;
+      background-color: var(--color-gray-light);
+      border: 2px solid var(--color-gray-light);
+      text-align: center;
+      margin: 0 20px;
+    }
+
+    .partner-nav-btn:hover {
+      transform: none;
+      box-shadow: none;
+      background-color: var(--color-sage-light);
+      border-color: var(--color-sage);
+    }
+
+    .partner-nav-logo {
+      max-width: 40px;
+    }
+
     .mobile-menu-btn {
       display: flex;
     }
@@ -255,6 +363,14 @@
     .contact-item svg {
       width: 10px;
       height: 10px;
+    }
+
+    .partner-nav-logo {
+      max-width: 80px;
+    }
+
+    .partner-nav-btn {
+      padding: 0.75rem 20px;
     }
   }
 </style>
