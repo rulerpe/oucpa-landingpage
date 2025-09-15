@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import vegasImage from '../assets/home-background.jpg';
+import oucpaLogo from '../assets/oucpa-logo.png';
 ---
 
 <section id="home" class="hero">
@@ -17,6 +18,7 @@ import vegasImage from '../assets/home-background.jpg';
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
+        <Image src={oucpaLogo} alt="Ou CPA LLC Logo" class="hero-logo"/>
         <h1>Professional, Precise, Principled</h1>
         <p class="hero-subtitle">
           Ou CPA LLC is a Nevada licensed CPA firm serving small businesses and professionals across the states. We pair professional judgment with precision and proactive planning to minimize taxes and keep you compliant year round. We prepare business and individual returns, provide bookkeeping and payroll, deliver clear tax projections, and handle IRS and state notices with practical, timely solutions.
@@ -63,7 +65,7 @@ import vegasImage from '../assets/home-background.jpg';
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(rgba(78, 78, 78, 0.6), rgba(0, 0, 0, 0.5));
     z-index: 1;
   }
 
@@ -78,6 +80,13 @@ import vegasImage from '../assets/home-background.jpg';
   .hero-text {
     text-align: center;
     max-width: 800px;
+  }
+
+  .hero-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
   }
 
   .hero-text h1 {
@@ -144,6 +153,11 @@ import vegasImage from '../assets/home-background.jpg';
       padding: 0 1rem;
     }
 
+    .hero-logo {
+      width: 120px;
+      margin-bottom: 1.2rem;
+    }
+
     .hero-text h1 {
       font-size: 2.5rem;
     }
@@ -165,6 +179,11 @@ import vegasImage from '../assets/home-background.jpg';
 
     .hero-bg-image {
       object-position: center 30%;
+    }
+
+    .hero-logo {
+      width: 180px;
+      margin-bottom: 1rem;
     }
 
     .hero-text h1 {

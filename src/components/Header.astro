@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import otptaxLogo from '../assets/otptax-logo.png';
+import oucpaLogo from '../assets/oucpa-logo.png';
 ---
 
 <header class="header">
@@ -9,7 +10,7 @@ import otptaxLogo from '../assets/otptax-logo.png';
       <div class="logo-section">
         <div class="logo">
           <a href="#home">
-            <img src="/logo.png" alt="Ou CPA LLC" />
+            <Image src={oucpaLogo} alt="Ou CPA LLC" width="50" />
           </a>
         </div>
         <div class="contact-info">
@@ -96,10 +97,8 @@ import otptaxLogo from '../assets/otptax-logo.png';
   }
 
   .logo img {
-    height: 40px;
-    width: auto;
-    max-width: 180px;
     object-fit: contain;
+    margin: -5px 0;
   }
 
   .contact-info {
@@ -273,6 +272,12 @@ import otptaxLogo from '../assets/otptax-logo.png';
   }
 
   @media (max-width: 768px) {
+    .logo img {
+      height: 45px;
+      max-width: 180px;
+      margin: -2.5px 0;
+    }
+
     .contact-item a {
       font-size: 0.7rem;
     }
@@ -348,6 +353,12 @@ import otptaxLogo from '../assets/otptax-logo.png';
   }
 
   @media (max-width: 480px) {
+    .logo img {
+      height: 40px;
+      max-width: 160px;
+      margin: -2px 0;
+    }
+
     .logo-section {
       gap: 0.75rem;
     }
